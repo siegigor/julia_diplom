@@ -29,6 +29,9 @@
                                         <li>Логин: <span><?=$user->username;?></span></li>
                                         <li>E-mail: <span><?=$user->email;?></span></li>
                                         <li>Страна: <span><?=$user->country;?></span></li>
+                                        <li>Университет: <span><?=$user->university;?></span></li>
+                                        <li>Группа: <span><?=$user->group;?></span></li>
+                                        <li>ФИО: <span><?=$user->name;?></span></li>
                                         <li>Решено задач: <span><?=$user->tasks_solved;?></span></li>
                                         <li>Рейтинг: <span><?=$user->raiting;?></span></li>
                                     </ul>
@@ -42,9 +45,10 @@
                         <?php $form = ActiveForm::begin(['id' => 'form-profile', 'options'=>['data-pjax'=>1]]); ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <?= $form->field($user, 'username')->textInput(['autofocus' => true]) ?>           
-                                    <?= $form->field($user, 'email') ?>
-                                    <?= $form->field($user, 'country')->textInput() ?>
+                                    <?= $form->field($user, 'name')->textInput() ?>           
+                                    <?= $form->field($user, 'university')->textInput() ?>  
+                                    <?= $form->field($user, 'country')->textInput() ?>  
+                                    <?= $form->field($user, 'group')->textInput() ?>  
                                 </div>
                             </div>
                             <div class="form-group">
@@ -80,12 +84,11 @@
                                     </td>
                                     
                                     <td>
-                                        <button class="show_code btn btn-primary">
+                                        <button data-id="<?=$sol->id;?>" class="show_code btn btn-primary">
                                             Показать код решения
                                         </button>
-                                        <div class="sol_code">
-                                        <pre><?= $sol->code ;?></pre>
-                                        
+                                        <div class="sol_code sol_code<?=$sol->id;?>">
+                                            <pre><?= Html::encode($sol->code);?></pre>
                                         </div>
                                     </td>
                                 </tr>

@@ -50,23 +50,14 @@ class MainController extends \yii\web\Controller
     
     public function actionTasks($category = false)
     {
+        $tasks_pag = Task::getAll($category);
+        $tasks = $tasks_pag['tasks'];
+        $pagination = $tasks_pag['pagination'];
         
-        if($category)
-        {
-            $tasks_pag = Task::getTaskByCategory($category);
-            $tasks = $tasks_pag['tasks'];
-            $pagination = $tasks_pag['pagination'];
-        }
-        else
-        {
-            $tasks_pag = Task::getAll();
-            $tasks = $tasks_pag['tasks'];
-            $pagination = $tasks_pag['pagination'];
-        }
-            
         $categories = Category::getAll();
         return $this->render('tasks', [
             'tasks' => $tasks,
+            'solutions'=>Solution::getUserSolutions($tasks),
             'categories' => $categories,
             'category' => $category,
             'pagination' => $pagination,
@@ -80,6 +71,7 @@ class MainController extends \yii\web\Controller
             throw new BadRequestHttpException('Задача не найдена. Возможно она была удалена');
             
         $solution = new Solution();
+        $task->findSolution();
         $solution->code=$task->sovedCode ? $task->sovedCode : '';
         
         if ($solution->load(Yii::$app->request->post())) 
@@ -126,9 +118,6 @@ class MainController extends \yii\web\Controller
                 $user->save();   
                 $edit=0;
             }
-            /*echo "<pre>";
-            print_r($competitions);
-            echo "</pre>";*/
             return $this->render('profile', [
                 'user' => $user,
                 'edit' => $edit,
@@ -171,6 +160,7 @@ class MainController extends \yii\web\Controller
                 'solved_tasks' => $solved_tasks,
             ]);
     }
+
     
     public function actionBoard($comp_id)
     {

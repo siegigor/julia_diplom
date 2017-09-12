@@ -26,7 +26,7 @@ class MyController extends Controller
                             if(User::isUserAdmin(Yii::$app->user->identity->username))
                                 return true;
                             else
-                                return  $this->redirect(['../../main/index']);
+                                return  false;
                        }
                     ],
                 ],

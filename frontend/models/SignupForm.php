@@ -12,6 +12,10 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $name;
+    public $university;
+    public $group;
+    public $country;
 
 
     /**
@@ -21,15 +25,15 @@ class SignupForm extends Model
     {
         return [
             ['username', 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
+            [['username', 'name', 'university', 'group', 'country'], 'required'],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким логином уже существует'],
             ['username', 'string', 'min' => 2, 'max' => 255],
-
+            [['name', 'university', 'group', 'country'], 'string', 'min'=>'3', 'max'=>'25'],
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким email уже существует'],
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
@@ -50,9 +54,25 @@ class SignupForm extends Model
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
+        $user->name = $this->name;
+        $user->university = $this->university;
+        $user->group = $this->group;
+        $user->country = $this->country;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         
         return $user->save() ? $user : null;
+    }
+    
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Логин',
+            'email' => 'Email',
+            'country' => 'Страна',
+            'group'=>'Группа',
+            'name'=>'ФИО',
+            'university'=>'Университет',
+        ];
     }
 }

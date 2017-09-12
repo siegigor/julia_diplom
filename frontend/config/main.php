@@ -50,6 +50,7 @@ return [
                 "task/<id:\d+>"=>"main/task",
                 'profile/edit/<edit:\d{1}>'=>'main/profile',
                 'profile'=>'main/profile',
+                'raiting'=>'main/raiting'
             ]
         ],
         

@@ -43,8 +43,7 @@ class Task extends \yii\db\ActiveRecord
             'output1' => 'Выходные данные #1',
         ];
     }
-    
-    public function afterFind()
+    /*public function afterFind()
     {
         if(!Yii::$app->user->isGuest)
         {
@@ -61,7 +60,7 @@ class Task extends \yii\db\ActiveRecord
                 $this->sovedCode = $error->code;
             }
         }
-    }
+    }*/
 
     public function getSolutions()
     {
@@ -78,7 +77,7 @@ class Task extends \yii\db\ActiveRecord
         return $this->hasMany(Test::className(), ['task_id' => 'id']);
     }
     
-    public static function getAll()
+    public static function getAll($category=false)
     {
         $query = self::find();
         
@@ -87,7 +86,10 @@ class Task extends \yii\db\ActiveRecord
             'totalCount' => $countQuery->count(),
             'defaultPageSize' => 9,
         ]);
-        
+        if($category)
+        {
+            $query->where(['category_id' => $category]);
+        }
         $tasks = $query->offset($pagination->offset)->limit($pagination->limit)->all();
         
         return ['tasks' => $tasks, 'pagination' => $pagination];
@@ -102,19 +104,22 @@ class Task extends \yii\db\ActiveRecord
     {
         return self::find()->orderBy('id DESC')->limit(5)->all();
     }
-    
-    public static function getTaskByCategory($category)
+    public function findSolution()
     {
-        $query = self::find()->where(['category_id' => $category]);
-         
-        $countQuery = clone $query;
-        $pagination = new Pagination([
-            'totalCount' => $countQuery->count(),
-            'defaultPageSize' => 9,
-        ]);
-        
-        $tasks = $query->offset($pagination->offset)->limit($pagination->limit)->all();
-        
-        return ['tasks' => $tasks, 'pagination' => $pagination];
+        if(!Yii::$app->user->isGuest)
+        {
+            $solution = Solution::isTaskSolved($this->id);
+            if(isset($solution->id))
+            {
+                $this->solvedTask = 1;
+                $this->sovedCode = $solution->code;
+            }
+            else
+            {
+                $error = Solution::isTaskError($this->id);
+                $this->solvedError = isset($error->id) ? 1 : 0;
+                $this->sovedCode = $error->code;
+            }
+        }
     }
 }

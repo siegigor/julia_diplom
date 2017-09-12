@@ -1,1 +1,4 @@
 [12-Sep-2017 18:35:19 Europe/Moscow] PHP Fatal error:  Call to undefined method common\models\Solution::isTaskSolved() in /home/tptohwig/public_html/diplom/common/models/Task.php on line 51
+[12-Sep-2017 20:19:52 Europe/Moscow] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/tptohwig/public_html/diplom/common/models/User.php on line 42
+[12-Sep-2017 20:20:05 Europe/Moscow] PHP Fatal error:  Class 'common\models\Solutions' not found in /home/tptohwig/public_html/diplom/common/models/Task.php on line 106
+[12-Sep-2017 20:33:09 Europe/Moscow] PHP Fatal error:  Call to undefined function frontend\controllers\getUserSolutions() in /home/tptohwig/public_html/diplom/frontend/controllers/MainController.php on line 70

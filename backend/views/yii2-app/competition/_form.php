@@ -4,7 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\Task;
 use kartik\select2\Select2;
-
 /* @var $this yii\web\View */
 /* @var $model common\models\Competition */
 /* @var $form yii\widgets\ActiveForm */
@@ -29,9 +28,16 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'time_end')->input('datetime-local') ?>
 
-    <?= $form->field($model, 'user_id')->textInput() ?>
-
-    <?= $form->field($model, 'checked')->textInput() ?>
+    <?php if(Yii::$app->controller->route == 'competition/update'){ ?>
+    <?= $form->field($model, 'checked')->widget(Select2::className(), [
+                'data' => [0 => 'Отклонить', 1 => 'Разрешить соревнование'],
+                'size' => Select2::MEDIUM,
+                'options' => ['multiple' => false, 'placeholder'=>'Модерировать'],
+                'pluginOptions' => [
+                    'allowClear' => true,
+                ],
+            ])   ?>
+    <?php } ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Редактировать', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

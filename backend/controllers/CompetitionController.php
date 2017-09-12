@@ -46,7 +46,8 @@ class CompetitionController extends MyController
     {
         $model = new Competition();
 
-        if ($model->load(Yii::$app->request->post()) && $model->saveAdmin(Yii::$app->identity->user->id)) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveAdmin(Yii::$app->user->identity->id)) 
+        {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

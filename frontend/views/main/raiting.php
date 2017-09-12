@@ -11,9 +11,12 @@
                         <tr>
                             <th>Место</th>
                             <th>Пользователь</th>
-                            <th>Местонахождение</th>
+                            <th>ФИО</th>
                             <th>Рейтинг</th>
-                            <th>Решенные задачи</th>
+                            <th>Задачи</th>
+                            <th>Местонахождение</th>
+                            <th>Университет</th>
+                            <th>Группа</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -21,11 +24,12 @@
                         <tr>
                             <th><?= $i ;?></th>
                             <td><a href="#"><?= $user->username ;?></a></td>
-                            <td>
-                                <?= $user->country;?>
-                            </td>
+                            <td><?=$user->name;?></td>
                             <td><?= $user->raiting;?></td>
                             <td><?= $user->tasks_solved ;?></td>
+                            <td><?= $user->country;?></td>
+                            <td><?=$user->university;?></td>
+                            <td><?=$user->group;?></td>
                         </tr>
                     <?php $i++; } ?>
                     </tbody>

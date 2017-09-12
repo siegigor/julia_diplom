@@ -2,7 +2,6 @@
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 use yii\widgets\Pjax;
-
 ?>
 <?php Pjax::begin(['id'=>'tasks_pjax', 'timeout'=>5000]);?>
 <div class="container main_content">
@@ -29,7 +28,7 @@ use yii\widgets\Pjax;
                     <a data-pjax="0" class="task_block_link" href="<?= Url::toRoute(['main/task', 'id' => $task->id]) ;?>">
                     <div class="task_block">
                         <p data-toggle="tooltip" data-placement="right" title="<?=$task->name;?>" class="tb_title"><?= mb_substr($task->name, 0, 23);?></p>
-                        <?php if($task->solvedTask){?>
+                        <?php if(in_array($task->id, $solutions)){?>
                         <p><span class="label label-success">Решена</span></p>
                         <?php }?>
                         <p class="tb_dif">Сложность </p>

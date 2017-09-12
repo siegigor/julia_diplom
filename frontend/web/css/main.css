@@ -326,3 +326,17 @@ h1,h2, h3, h4
 {
     text-decoration: none;
 }
+.site-signup
+{
+    text-align: center;
+}
+.site-signup form input
+{
+    width:100%;
+    max-width: 400px;
+    margin: auto;
+}
+.site-signup form input[type="checkbox"]
+{
+    width: inherit;
+}

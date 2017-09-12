@@ -10,13 +10,12 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Вход на сайт';
 ?>
 <div class="container">
-    <div class="site-login">
+    <div class="site-signup">
         <h1><?= Html::encode($this->title) ?></h1>
     
         <p>Пожалуйста, заполните следующие поля, что бы зайти:</p>
     
         <div class="row">
-            <div class="col-lg-5">
                 <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
     
                     <?= $form->field($model, 'username')->textInput(['autofocus' => true])->label('Логин') ?>
@@ -34,7 +33,6 @@ $this->title = 'Вход на сайт';
                     </div>
     
                 <?php ActiveForm::end(); ?>
-            </div>
         </div>
     </div>
 </div>

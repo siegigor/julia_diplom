@@ -16,21 +16,24 @@ $this->title = 'Регистрация';
         <p>Пожалуйста, заполните следующие поля для регистрации:</p>
     
         <div class="row">
-            <div class="col-lg-5">
                 <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
     
-                    <?= $form->field($model, 'username')->textInput(['autofocus' => true])->label('Логин') ?>
+                    <?= $form->field($model, 'username')->textInput()->label('Логин') ?>
     
                     <?= $form->field($model, 'email')->label('E-mail') ?>
     
                     <?= $form->field($model, 'password')->passwordInput()->label('Пароль') ?>
+                    
+                    <?= $form->field($model, 'name')->textInput()->label('ФИО') ?>
+                    <?= $form->field($model, 'country')->textInput()->label('Страна') ?>
+                    <?= $form->field($model, 'university')->textInput()->label('Университет') ?>
+                    <?= $form->field($model, 'group')->textInput()->label('Группа') ?>
     
                     <div class="form-group">
                         <?= Html::submitButton('Зарегистрироваться', ['class' => 'tb_button', 'name' => 'signup-button']) ?>
                     </div>
     
                 <?php ActiveForm::end(); ?>
-            </div>
         </div>
     </div>
 </div>

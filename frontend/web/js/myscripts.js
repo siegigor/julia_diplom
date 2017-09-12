@@ -1,5 +1,15 @@
 $('.show_code').click(function(){
-    $('.sol_code').css('display', 'block');
+    var id=$(this).attr('data-id');
+    if($('.sol_code'+id).css('display')=='none')
+    {
+        $(this).text('Скрыть код решения')
+        $('.sol_code'+id).css('display', 'block');
+    }
+    else
+    {
+        $(this).text('Показать код решения');
+        $('.sol_code'+id).css('display', 'none');
+    }
 })
 
 $("#task_pjax").on("pjax:start", function() {

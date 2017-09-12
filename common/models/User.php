@@ -15,7 +15,9 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
-
+    const ROLE_ADMIN = 20;
+    const ROLE_USER = 0;
+    
     public static function tableName()
     {
         return '{{%user}}';
@@ -35,7 +37,8 @@ class User extends ActiveRecord implements IdentityInterface
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
             [['raiting', 'tasks_solved'], 'integer'],
-            [['country'], 'string', 'max' => 255],
+            [['country', 'university', 'group', 'name'], 'string', 'max' => 255],
+            ['role', 'in', 'range' => [self::ROLE_USER, self::ROLE_ADMIN]],
         ];
     }
     
@@ -49,6 +52,9 @@ class User extends ActiveRecord implements IdentityInterface
             'lang' => 'Lang',
             'tasks_solved' => 'Решенные задачи',
             'country' => 'Страна',
+            'group'=>'Группа',
+            'name'=>'ФИО',
+            'university'=>'Университет',
         ];
     }
     
@@ -75,7 +81,19 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::find()
+            ->where(['or', ['username' => $username],['email'=>$username]])
+            ->andWhere(['status' => self::STATUS_ACTIVE])
+            ->one();
+    }
+    
+    public static function isUserAdmin($username)
+    {
+        if (static::findOne(['username' => $username, 'role' => self::ROLE_ADMIN]))
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -213,7 +231,7 @@ class User extends ActiveRecord implements IdentityInterface
     
     public static function getRaiting()
     {
-        return self::find()->select(['username', 'raiting', 'tasks_solved', 'country'])->orderBy('raiting DESC')->all();
+        return self::find()->select(['username', 'raiting', 'tasks_solved', 'country', 'name', 'university', 'group'])->orderBy('raiting DESC')->all();
     }
     
     public static function getShortRaiting()

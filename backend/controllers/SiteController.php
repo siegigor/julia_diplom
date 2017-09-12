@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\User;
 
 /**
  * Site controller
@@ -15,20 +16,26 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
+   public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'error'],
                         'allow' => true,
                         'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            if(User::isUserAdmin(Yii::$app->user->identity->username))
+                                return true;
+                            else
+                                return false;
+                       }
                     ],
                 ],
             ],
@@ -75,9 +82,17 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
+           
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) 
+        {
+            try {
+                $model->login();
+                return $this->goBack();
+            } catch (\DomainException $e) {
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
+        } else 
+        {
             return $this->render('login', [
                 'model' => $model,
             ]);

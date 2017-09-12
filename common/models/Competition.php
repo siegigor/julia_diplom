@@ -101,12 +101,14 @@ class Competition extends \yii\db\ActiveRecord
         $competition->checked = 1;
         $competition->save();
     }
+
     
     public function saveAdmin($user_id = false)
     {
         $this->user_id = $user_id;
         $this->checked = 1;
-        $this->save();
+        $this->task_ids = implode(", ", $this->task_ids);
+        return $this->save();
     }
     
     

@@ -92,7 +92,7 @@ class Solution extends \yii\db\ActiveRecord
         
         return $isSolved;
     }
-    
+
     public static function solvedFromCompetition($comp_id)
     {
         return self::find()->where(['competition_id' => $comp_id, 'user_id' => Yii::$app->user->identity->id])->all();
@@ -106,6 +106,16 @@ class Solution extends \yii\db\ActiveRecord
      public static function isTaskError($task_id)
      {
         return self::find()->select(['id', 'code', 'error'])->where(['user_id' => Yii::$app->user->identity->id, 'task_id' => $task_id])->andWhere(['or',['!=', 'error', ''],['solved' => 0]])->orderBy('id DESC')->limit(1)->one();
+     }
+     public static function getUserSolutions($tasks)
+     {
+        $ids=[];
+        foreach($tasks as $task)
+        {
+            $ids[]=$task->id;
+        }
+        $user_id=Yii::$app->user->identity->id;
+        return self::find()->select(['task_id'])->where(['user_id'=>$user_id, 'task_id'=>$ids, 'solved'=>1])->indexBy('task_id')->column();
      }
 }
 
