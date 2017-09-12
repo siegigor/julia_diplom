@@ -6,16 +6,7 @@ use Yii;
 use common\models\Task;
 use common\models\User;
 use common\models\Board;
-/**
- * This is the model class for table "competition".
- *
- * @property integer $id
- * @property string $task_ids
- * @property string $time_start
- * @property string $time_end
- *
- * @property Board[] $boards
- */
+
 class Competition extends \yii\db\ActiveRecord
 {
     
@@ -24,9 +15,9 @@ class Competition extends \yii\db\ActiveRecord
         return 'competition';
     }
 
-    /**
-     * @inheritdoc
-     */
+    public $hasThisUser;
+    public $start;
+
     public function rules()
     {
         return [
@@ -36,10 +27,18 @@ class Competition extends \yii\db\ActiveRecord
             [['task_ids', 'time_start', 'time_end'], 'safe'],
         ];
     }
+    public function afterFind()
+    {
+        $board= Board::find()->where(['competition_id'=>$this->id, 'user_id'=>Yii::$app->user->identity->id])->limit(1)->one();
+        
+        $this->hasThisUser= $board->id ? $board->id : false;
+        
+        if($this->time_start > date('U'))
+            $this->start = 0;
+        else
+            $this->start = 1;
+    }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -53,9 +52,7 @@ class Competition extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
+
     public function getBoards()
     {
         return $this->hasMany(Board::className(), ['competition_id' => 'id']);
@@ -76,6 +73,16 @@ class Competition extends \yii\db\ActiveRecord
         return self::find()->where([">", 'time_end', date('U')])->andWhere(['checked' => 1])->all();
     }
     
+    public static function getNewCompetitions()
+    {
+        return self::find()->where([">", 'time_end', date('U')])->andWhere(['checked' => 1])->orderBy('id DESC')->limit(5)->all();
+    }
+    
+    public static function getIdsCompetitions()
+    {
+        return self::find()->select(['id'])->where([">", 'time_end', date('U')])->andWhere(['checked' => 1])->column();
+    }
+    
     public static function getCompetition($id)
     {
         return self::find()->where(['id' => $id])->limit(1)->one();
@@ -94,5 +101,13 @@ class Competition extends \yii\db\ActiveRecord
         $competition->checked = 1;
         $competition->save();
     }
+    
+    public function saveAdmin($user_id = false)
+    {
+        $this->user_id = $user_id;
+        $this->checked = 1;
+        $this->save();
+    }
+    
     
 }

@@ -4,14 +4,12 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
 use yii\helpers\Url;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$url=Url::to('');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -30,7 +28,6 @@ AppAsset::register($this);
 
 <nav class="navbar navbar-default top_menu">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -41,35 +38,27 @@ AppAsset::register($this);
       <a class="navbar-brand" href="<?= Url::toRoute(['main/index']);?>">Главная</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<?= Url::toRoute(['main/tasks']);?>">Задачи <span class="sr-only">(current)</span></a></li>
-        <li><a href="<?= Url::toRoute(['main/competitions']);?>">Соревнования</a></li>
-        <li><a href="<?= Url::toRoute(['main/raiting']);?>">Рейтинг</a></li>
-        <li><a href="<?= Url::toRoute(['main/about']);?>">О нас</a></li>
+        <li <?php if (strpos($url, 'task')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/tasks']);?>"><i class="fa fa-code" aria-hidden="true"></i> Задачи <span class="sr-only">(current)</span></a></li>
+        <li <?php if (strpos($url, 'competition')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/competitions']);?>"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Соревнования</a></li>
+        <li <?php if (strpos($url, 'raiting')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/raiting']);?>"><i class="fa fa-star-o" aria-hidden="true"></i> Рейтинг</a></li>
+        <!--<li><a href="<?= Url::toRoute(['main/about']);?>">О нас</a></li>-->
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
       <?php if(Yii::$app->user->isGuest){?>
-        <li><a href="<?= Url::toRoute(['site/login']);?>"><i class="fa fa-user-circle" aria-hidden="true"></i> Вход</a></li>
-        <li><a href="<?= Url::toRoute(['site/signup']);?>">Регистрация</a></li>
+        <li <?php if (strpos($url, 'login')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['site/login']);?>"><i class="fa fa-user-circle" aria-hidden="true"></i> Вход</a></li>
+        <li <?php if (strpos($url, 'signup')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['site/signup']);?>">Регистрация</a></li>
       <?php } else { ?>
           <li class="menu_profile">
-          Добро пожаловать, <a href="<?= Url::toRoute(['main/profile']);?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?=Yii::$app->user->identity->username;?></a>
+            <a href="<?= Url::toRoute(['main/profile']);?>">Личный кабинет  <i class="fa fa-user-circle" aria-hidden="true"></i> <?=Yii::$app->user->identity->username;?></a>
           </li>
-          <li><a class="logout" href="<?=Url::toRoute(['site/logout']);?>">Выход</a></li>
-          <style>
-            .top_menu .menu_profile a
-            {
-                display: inline-block;
-                text-decoration: underline;  
-            }
-          </style>
+          <li><a class="logout" href="<?=Url::toRoute(['site/logout']);?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Выход</a></li>
       <?php } ?>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>    
 
     <div>

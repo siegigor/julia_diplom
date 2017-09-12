@@ -45,6 +45,11 @@ return [
             'showScriptName' => false,
             'rules' => [
                 ""=>"main/index",
+                "tasks/category/<category:\d+>"=>"main/tasks",
+                "tasks"=>"main/tasks",
+                "task/<id:\d+>"=>"main/task",
+                'profile/edit/<edit:\d{1}>'=>'main/profile',
+                'profile'=>'main/profile',
             ]
         ],
         

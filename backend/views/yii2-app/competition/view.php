@@ -7,19 +7,17 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Competition */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Competitions', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Соревнования', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="competition-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите удалить?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -28,13 +26,32 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            //'id',
             'name',
             'task_ids',
-            'time_start',
-            'time_end',
-            'user_id',
-            'checked',
+            [
+                'attribute' => 'time_start',
+                'format' =>  ['date', 'H:i (d.m.Y)'],
+            ],
+            [
+                'attribute' => 'time_end',
+                'format' =>  ['date', 'H:i (d.m.Y)'],
+            ],
+            [
+                'attribute' => 'user_id',
+                'value' => $model->users->username,
+            ],
+            [
+                'attribute' => 'checked',
+                'format' => 'html',
+                'value' => function()
+                {
+                    if($model->competition->checked == 0)
+                         return '<i class="fa fa-minus" aria-hidden="true"></i>';
+                    else if($model->competition->checkedd == 1)
+                        return '<i class="fa fa-check" aria-hidden="true"></i>';
+                }
+            ],
         ],
     ]) ?>
 

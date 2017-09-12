@@ -1,8 +1,9 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;  
+use yii\widgets\Pjax;
 ?>
-
+<?php Pjax::begin(['id'=>'task_pjax', 'timeout'=>60000, 'scrollTo'=>100]);?>
 <div class="container main_content">
     <?php if($result){ ?>
     <div class="row test_res">
@@ -91,7 +92,7 @@ use yii\widgets\ActiveForm;
                 <p class="task_not_solved_p">Вы можете отправить задачу еще раз, но она не будет повторно учитываться в рейтинге.</p>
             <?php } ?>
             
-                <?php $form = ActiveForm::begin(); ?>
+                <?php $form = ActiveForm::begin(['id'=>'codesendform','options' => ['data-pjax' => true]]); ?>
                 <?= $form->field($solution, 'lang')->dropDownList(['CPP'=>'C/C++', 'JAVA' => 'Java', 'CSHARP' => 'C#'])->label('Выберите язык') ?>
                 <?= $form->field($solution, 'code')->widget(
                     'trntv\aceeditor\AceEditor',
@@ -109,3 +110,4 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
 </div>
+<?php Pjax::end();?>

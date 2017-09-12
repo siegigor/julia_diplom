@@ -1,0 +1,704 @@
+[12-Sep-2017 18:18:34 Europe/Moscow] PHP Fatal error:  Class 'User' not found in /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php on line 29
+[12-Sep-2017 18:19:06 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 13)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::username' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('username')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('username')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'username')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#15 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(40): yii\base\Widget::widget(Array)
+#16 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#21 [internal function]: backend\controllers\SolutionController->actionIndex()
+#22 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#28 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '62897',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/solution',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505229546.33114910125732421875,
+    'REQUEST_TIME' => 1505229546,
+]
+[12-Sep-2017 18:19:57 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 15)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: common\models\Competition::start' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:201
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(306): yii\base\Component->__set('start', 1)
+#1 /home/tptohwig/public_html/diplom/common/models/Competition.php(38): yii\db\BaseActiveRecord->__set('start', 1)
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/ActiveQuery.php(224): common\models\Competition->afterFind()
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/Query.php(214): yii\db\ActiveQuery->populate(Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/data/ActiveDataProvider.php(113): yii\db\ActiveQuery->all(NULL)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/data/BaseDataProvider.php(81): yii\data\ActiveDataProvider->prepareModels()
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/data/BaseDataProvider.php(94): yii\data\BaseDataProvider->prepare()
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/data/BaseDataProvider.php(135): yii\data\BaseDataProvider->getModels()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(182): yii\data\BaseDataProvider->getCount()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(153): yii\widgets\BaseListView->renderSummary()
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{summary}')
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{summary}')
+#13 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#16 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#17 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/index.php(74): yii\base\Widget::widget(Array)
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\CompetitionController))
+#21 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\CompetitionController))
+#22 /home/tptohwig/public_html/diplom/backend/controllers/CompetitionController.php(35): yii\base\Controller->render('index', Array)
+#23 [internal function]: backend\controllers\CompetitionController->actionIndex()
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('competition', Array)
+#28 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#30 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=331f1c79df4b80288c5580c61fb09d5cf51a7df3b7f253e7bc198fad79b39960a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GJxz5DakFYLr7ziOjpqJbpOLzeEXtKI-%22%3B%7D; advanced-frontend=kcpr3esvhod3kb97dot749i3g3; _identity-frontend=6cfb5977d6efeb3b9b99417fa3ac306dc4aacca634572984122043cf51701b0ba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22HPlPxcuDfgzNEjbFaAj5wVFGxlUozqFC%22%2C2592000%5D%22%3B%7D; advanced-backend=ijeeg46nhk82v65hf8ptg2p8t7; _identity-backend=84b5f1fd569b6e200e5c192e97c1ae87e88864ca1dc773468833c5c554664186a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22HPlPxcuDfgzNEjbFaAj5wVFGxlUozqFC%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/solution',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.71',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '10873',
+    'REDIRECT_URL' => '/yii-admin/competition',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/competition',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505229597.747931003570556640625,
+    'REQUEST_TIME' => 1505229597,
+]
+[12-Sep-2017 18:30:58 Europe/Moscow] PHP Fatal error:  Class 'Competition' not found in /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php on line 57
+[12-Sep-2017 18:31:12 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::copmpetition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('copmpetition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('copmpetition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'copmpetition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'copmpetition.na...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '62449',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'REDIRECT_QUERY_STRING' => 'SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'REQUEST_URI' => '/yii-admin/solution?SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505230272.707889080047607421875,
+    'REQUEST_TIME' => 1505230272,
+]
+[12-Sep-2017 18:31:56 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::competition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('competition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition.nam...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '63161',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'REDIRECT_QUERY_STRING' => 'SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'REQUEST_URI' => '/yii-admin/solution?SolutionSearch%5Buser_id%5D=&SolutionSearch%5Btask_id%5D=&SolutionSearch%5Bsolved%5D=',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505230316.389380931854248046875,
+    'REQUEST_TIME' => 1505230316,
+]
+[12-Sep-2017 18:35:37 Europe/Moscow] PHP Fatal error:  Call to undefined method common\models\Solution::isTaskSolved() in /home/tptohwig/public_html/diplom/common/models/Task.php on line 51
+[12-Sep-2017 18:35:58 Europe/Moscow] PHP Fatal error:  Call to undefined method common\models\Solution::isTaskSolved() in /home/tptohwig/public_html/diplom/common/models/Task.php on line 51
+[12-Sep-2017 18:37:02 Europe/Moscow] PHP Fatal error:  Call to undefined method common\models\Solution::isTaskSolved() in /home/tptohwig/public_html/diplom/common/models/Task.php on line 51
+[12-Sep-2017 18:39:50 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::competition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('competition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition.nam...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '62395',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/solution',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505230790.2393710613250732421875,
+    'REQUEST_TIME' => 1505230790,
+]
+[12-Sep-2017 18:39:53 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::competition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('competition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition.nam...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '63246',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/solution',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505230793.1891510486602783203125,
+    'REQUEST_TIME' => 1505230793,
+]
+[12-Sep-2017 18:45:00 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::competition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('competition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition.nam...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '62469',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/solution',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505231100.268496990203857421875,
+    'REQUEST_TIME' => 1505231100,
+]
+[12-Sep-2017 18:48:01 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 14)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::competition' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('competition')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(202): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition', NULL)
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(211): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Solution), 'competition.nam...')
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Solution), 96, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Solution), 96, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Solution), 96, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Solution), 96, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/index.php(62): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\SolutionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\SolutionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=1g1edkmaqj0a6og5vbg33utb04; _identity-frontend=de3ecb78854199e757d9770440e632b71ed22a011cf87cf085073a9a937fa423a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D; advanced-backend=b18vv288bgq4u071jgil5qiei5; _identity-backend=2fe0b3eb17e1f5b4df120bf3d21d77e51bbbc4afe44aa95b007c557e40e2740ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B8%2C%22rvmJgjPULrSyvA5fsnJMWOjPvDPE45ed%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/user',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.163.96.9',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '62535',
+    'REDIRECT_URL' => '/yii-admin/solution',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/solution',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505231281.3203918933868408203125,
+    'REQUEST_TIME' => 1505231281,
+]
+[12-Sep-2017 18:56:40 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''task_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/view.php on line 25
+[12-Sep-2017 19:50:19 Europe/Moscow] PHP Fatal error:  Declaration of common\models\Competition::save() must be compatible with yii\db\ActiveRecordInterface::save($runValidation = true, $attributeNames = NULL) in /home/tptohwig/public_html/diplom/common/models/Competition.php on line 11
+[12-Sep-2017 19:50:19 Europe/Moscow] PHP Fatal error:  Declaration of common\models\Competition::save() must be compatible with yii\db\ActiveRecordInterface::save($runValidation = true, $attributeNames = NULL) in /home/tptohwig/public_html/diplom/common/models/Competition.php on line 0

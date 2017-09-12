@@ -47,11 +47,19 @@ th, label, .profile .profile_data li span
 {
     border-radius: 0;
 }
+.navbar-default .navbar-nav > li > a:hover
+{
+    color: #555;
+    background-color: #e7e7e7;
+}
 nav
 {
     text-align: right;
 }
-
+nav i
+{
+    color: blue;
+}
 .main_content
 {
     width: 970px;
@@ -65,7 +73,21 @@ h1,h2, h3, h4
     color: #171d71;
     font-family: OpenSans-Semibold;
 }
-
+.top_menu li.menu_profile a
+{
+    display: inline-block;
+    background-color: #8cbff3;
+    padding: 2px 5px;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #fff; 
+    transition: 1s background-color;
+}
+.top_menu .menu_profile a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
 .main_button
 {
     padding: 8px 17px;
@@ -129,7 +151,7 @@ h1,h2, h3, h4
 .new_competisions
 {
     margin-bottom: 25px;
-    height: 238px;
+    /*height: 238px;*/
 }
 
 /* Задачи */
@@ -160,7 +182,10 @@ h1,h2, h3, h4
     height: 155px;
     transition: all 0.5s;
 }
-
+#solution-lang
+{
+    width:115px;
+}
 .tb_title
 {
     text-transform: uppercase;

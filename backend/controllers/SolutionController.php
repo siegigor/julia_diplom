@@ -9,14 +9,9 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-/**
- * SolutionController implements the CRUD actions for Solution model.
- */
-class SolutionController extends Controller
+class SolutionController extends MyController
 {
-    /**
-     * @inheritdoc
-     */
+
     public function behaviors()
     {
         return [
@@ -29,10 +24,6 @@ class SolutionController extends Controller
         ];
     }
 
-    /**
-     * Lists all Solution models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new SolutionSearch();
@@ -44,11 +35,6 @@ class SolutionController extends Controller
         ]);
     }
 
-    /**
-     * Displays a single Solution model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         return $this->render('view', [
@@ -56,12 +42,7 @@ class SolutionController extends Controller
         ]);
     }
 
-    /**
-     * Creates a new Solution model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
+   /* public function actionCreate()
     {
         $model = new Solution();
 
@@ -74,12 +55,6 @@ class SolutionController extends Controller
         }
     }
 
-    /**
-     * Updates an existing Solution model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -93,26 +68,13 @@ class SolutionController extends Controller
         }
     }
 
-    /**
-     * Deletes an existing Solution model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
-    }
+    }*/
 
-    /**
-     * Finds the Solution model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Solution the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Solution::findOne($id)) !== null) {

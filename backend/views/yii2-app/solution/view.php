@@ -6,36 +6,44 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Solution */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Solutions', 'url' => ['index']];
+$this->title = "Решение № ".$model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Решения', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="solution-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
-            'user_id',
-            'task_id',
+            [
+                'attribute' => 'user_id',
+                'value' => $model->user->username,
+            ],
+            [
+                'attribute' => 'task_id',
+                'value' => $model->task->name,
+            ],
             'code:ntext',
             'lang',
-            'test_result:ntext',
+            //'test_result:ntext',
             'error:ntext',
-            'solved',
+            [
+                'attribute' => 'solved',
+                'format' => 'html',
+                'value' => function()
+                {
+                    if($model->solution->solved == 0)
+                         return '<i class="fa fa-minus" aria-hidden="true"></i>';
+                    else if($model->solution->solved == 1)
+                        return '<i class="fa fa-check" aria-hidden="true"></i>';
+                }
+            ],
+            [
+                'attribute' => 'competition_id',
+                'value' => $model->competitions->name,
+            ]
         ],
     ]) ?>
 

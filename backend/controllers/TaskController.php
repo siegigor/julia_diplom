@@ -12,14 +12,9 @@ use yii\filters\VerbFilter;
 use common\models\Test;
 use backend\models\Model;
 
-/**
- * TaskController implements the CRUD actions for Task model.
- */
-class TaskController extends Controller
+class TaskController extends MyController
 {
-    /**
-     * @inheritdoc
-     */
+
     public function behaviors()
     {
         return [
@@ -32,10 +27,6 @@ class TaskController extends Controller
         ];
     }
 
-    /**
-     * Lists all Task models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new TaskSearch();
@@ -47,11 +38,6 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * Displays a single Task model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         return $this->render('view', [
@@ -59,11 +45,6 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * Creates a new Task model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
     public function actionCreate()
     {
         $model = new Task();
@@ -75,7 +56,6 @@ class TaskController extends Controller
 
             // validate all models
             $valid = $model->validate();
-            //$valid = Model::validateMultiple($modelTests) && $valid;
 
             if ($valid) {
                 $transaction = \Yii::$app->db->beginTransaction();
@@ -106,12 +86,6 @@ class TaskController extends Controller
         }
     }
 
-    /**
-     * Updates an existing Task model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -159,12 +133,6 @@ class TaskController extends Controller
         }
     }
 
-    /**
-     * Deletes an existing Task model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
@@ -172,13 +140,6 @@ class TaskController extends Controller
         return $this->redirect(['index']);
     }
 
-    /**
-     * Finds the Task model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Task the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Task::findOne($id)) !== null) {

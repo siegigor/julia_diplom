@@ -10,6 +10,7 @@ use common\models\Solution;
 use common\models\User;
 use common\models\Competition;
 use common\models\Board;
+use yii\web\BadRequestHttpException;
 use yii\filters\AccessControl;
 use frontend\models\CheckApi;
 
@@ -24,11 +25,6 @@ class MainController extends \yii\web\Controller
                 'class' => AccessControl::className(),
                 'only' => ['task'],
                 'rules' => [
-                    /*[
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],*/
                     [
                         'actions' => ['task'],
                         'allow' => true,
@@ -43,10 +39,13 @@ class MainController extends \yii\web\Controller
     {
         $users = User::getShortRaiting();
         $tasks = Task::getNewTasks();
+        $competitions = Competition::getNewCompetitions();
         return $this->render('index', [
             'users' => $users,
             'tasks' => $tasks,
+            'competitions' => $competitions,
         ]);
+
     }
     
     public function actionTasks($category = false)
@@ -77,11 +76,11 @@ class MainController extends \yii\web\Controller
     public function actionTask($id, $cid = false)
     {
         $task = Task::getTask($id);
-        
-        if(User::isHasRez(Yii::$app->user->identity->id, $task->id) === true)
-            $close_task = 1;
+        if(!$task)
+            throw new BadRequestHttpException('Задача не найдена. Возможно она была удалена');
             
         $solution = new Solution();
+        $solution->code=$task->sovedCode ? $task->sovedCode : '';
         
         if ($solution->load(Yii::$app->request->post())) 
         {   
@@ -95,6 +94,9 @@ class MainController extends \yii\web\Controller
             $isSolved = $solution->checkAndSave($task, $error, $success, $cid);
         }
         
+        if(User::isHasRez(Yii::$app->user->identity->id, $task->id) === true)
+            $close_task = 1;
+        
         return $this->render('task',[
             'task' => $task,
             'solution' => $solution,
@@ -104,6 +106,8 @@ class MainController extends \yii\web\Controller
             'close_task' => $cid ? false : $close_task,
         ]);
     }
+    
+
     
     public function actionProfile($edit = false)
     {

@@ -7,38 +7,28 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = 'Пользователи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 <?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'headerOptions' => ['width' => '60'],
+                'template' => '{view} {delete}{link}',
+            ],
             'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            // 'email:email',
-            // 'status',
-            // 'role',
-            // 'created_at',
-            // 'updated_at',
-            // 'raiting',
-            // 'tasks_solved',
-            // 'country',
+            'email:email',
+            'raiting',
+            'tasks_solved',
+            'country',
 
-            ['class' => 'yii\grid\ActionColumn'],
+
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

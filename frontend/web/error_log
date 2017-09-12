@@ -1,0 +1,1 @@
+[12-Sep-2017 18:35:19 Europe/Moscow] PHP Fatal error:  Call to undefined method common\models\Solution::isTaskSolved() in /home/tptohwig/public_html/diplom/common/models/Task.php on line 51

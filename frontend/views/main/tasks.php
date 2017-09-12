@@ -1,8 +1,10 @@
 <?php 
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
-?>
+use yii\widgets\Pjax;
 
+?>
+<?php Pjax::begin(['id'=>'tasks_pjax', 'timeout'=>5000]);?>
 <div class="container main_content">
     <div class="row">
         <div class="col-md-3">
@@ -24,9 +26,12 @@ use yii\widgets\LinkPager;
             <div class="row">
             <?php foreach($tasks as $task){ ?>
                 <div class="col-md-4">
-                    <a class="task_block_link" href="<?= Url::toRoute(['main/task', 'id' => $task->id]) ;?>">
+                    <a data-pjax="0" class="task_block_link" href="<?= Url::toRoute(['main/task', 'id' => $task->id]) ;?>">
                     <div class="task_block">
-                        <p class="tb_title"><?= $task->name;?></p>
+                        <p data-toggle="tooltip" data-placement="right" title="<?=$task->name;?>" class="tb_title"><?= mb_substr($task->name, 0, 23);?></p>
+                        <?php if($task->solvedTask){?>
+                        <p><span class="label label-success">Решена</span></p>
+                        <?php }?>
                         <p class="tb_dif">Сложность </p>
                         <p class="tb_stars">
                             <?php for($i = 0; $i < $task->num; $i++){ ?>
@@ -52,3 +57,4 @@ use yii\widgets\LinkPager;
     <?php }?>
     </div>
 </div>
+<?php Pjax::end();?>

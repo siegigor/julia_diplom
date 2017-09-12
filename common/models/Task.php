@@ -4,34 +4,20 @@ namespace common\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\models\Solution;
 
-/**
- * This is the model class for table "task".
- *
- * @property integer $id
- * @property string $name
- * @property string $text
- * @property integer $num
- * @property integer $category_id
- * @property integer $test_id
- *
- * @property Solution[] $solutions
- * @property Category $category
- * @property Test $test
- */
 class Task extends \yii\db\ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
+
     public static function tableName()
     {
         return 'task';
     }
 
-    /**
-     * @inheritdoc
-     */
+    public $solvedTask;
+    public $sovedCode;
+    public $solvedError;
+    
     public function rules()
     {
         return [
@@ -43,9 +29,6 @@ class Task extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -60,26 +43,36 @@ class Task extends \yii\db\ActiveRecord
             'output1' => 'Выходные данные #1',
         ];
     }
+    
+    public function afterFind()
+    {
+        if(!Yii::$app->user->isGuest)
+        {
+            $solution = Solution::isTaskSolved($this->id);
+            if(isset($solution->id))
+            {
+                $this->solvedTask = 1;
+                $this->sovedCode = $solution->code;
+            }
+            else
+            {
+                $error = Solution::isTaskError($this->id);
+                $this->solvedError = isset($error->id) ? 1 : 0;
+                $this->sovedCode = $error->code;
+            }
+        }
+    }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getSolutions()
     {
         return $this->hasMany(Solution::className(), ['task_id' => 'id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getCategory()
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getTest()
     {
         return $this->hasMany(Test::className(), ['task_id' => 'id']);
