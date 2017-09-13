@@ -115,22 +115,22 @@
                             <?php $i = 1; foreach($competitions as $comp){ ?>
                                 <tr>
                                     <th><?= $i ;?></th>
-                                    <td><?= $comp->competition->name ;?>
-                                    <?php if($comp->competition->user_id === Yii::$app->user->identity->id){ ?>
+                                    <td><?= $comp->name ;?>
+                                    <?php if($comp->user_id === Yii::$app->user->identity->id){ ?>
                                         <a class="edit_comp" href="<?= Url::toRoute(['main/editcompetition', 'id' => $comp->id]);?>"><span>Редактировать</span> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                     <?php } ?>
                                     </td>
                                     <td>
-                                    <?php if($comp->competition->time_end > date('U')){ ?>
-                                        <a href="<?= Url::toRoute(['main/competition', 'id' => $comp->competition->id]);?>" class="btn btn-warning">Продолжить соревнование</a>
+                                    <?php if($comp->time_end > date('U')){ ?>
+                                        <a href="<?= Url::toRoute(['main/competition', 'id' => $comp->id]);?>" class="btn btn-warning">Продолжить соревнование</a>
                                     <?php } else {?>
-                                        <a href="<?= Url::toRoute(['main/board', 'comp_id' => $comp->competition->id]);?>" class="btn btn-danger">Посмотреть результаты</a>
+                                        <a href="<?= Url::toRoute(['main/board', 'comp_id' => $comp->id]);?>" class="btn btn-danger">Посмотреть результаты</a>
                                     <?php }?>
                                     </td>
                                     <td>
-                                        <?= date('H:i (d.m.Y)', $comp->competition->time_start);?>
+                                        <?= date('H:i (d.m.Y)', $comp->time_start);?>
                                     </td>
-                                    <td><?= date('H:i (d.m.Y)', $comp->competition->time_end);?></td>
+                                    <td><?= date('H:i (d.m.Y)', $comp->time_end);?></td>
                                 </tr>
                             <?php $i++; } ?>
                             </tbody>

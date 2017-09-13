@@ -29,10 +29,7 @@ class Competition extends \yii\db\ActiveRecord
     }
     public function afterFind()
     {
-        $board= Board::find()->where(['competition_id'=>$this->id, 'user_id'=>Yii::$app->user->identity->id])->limit(1)->one();
-        
-        $this->hasThisUser= $board->id ? $board->id : false;
-        
+      
         if($this->time_start > date('U'))
             $this->start = 0;
         else
@@ -108,7 +105,18 @@ class Competition extends \yii\db\ActiveRecord
         $this->user_id = $user_id;
         $this->checked = 1;
         $this->task_ids = implode(", ", $this->task_ids);
+        $this->time_start = strtotime($this->time_start);
+        $this->time_end = strtotime($this->time_end); 
         return $this->save();
+    }
+    
+    public static function getCompetitionByUser($user_id)
+    {
+        return self::find()
+        ->leftJoin('board', '`board`.`competition_id` = `competition`.`id`')
+        ->with('boards')
+        ->where(['board.user_id' => $user_id])
+        ->all();
     }
     
     

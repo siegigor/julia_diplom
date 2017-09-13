@@ -91,9 +91,17 @@ class Board extends \yii\db\ActiveRecord
         return self::find()->where(['competition_id' => $comp_id])->orderBy('score DESC')->all();
     } 
     
-    public static function getUserCompetition()
-    {   
-        return self::find()->select('competition_id')->where(['user_id' => Yii::$app->user->identity->id])->all();
-         
+    public static function getUserCompetition($comps)
+    {   $ids=[];
+        foreach($comps as $comp)
+        {
+            $ids[]=$comp->id;
+        }
+        return self::find()
+        ->select('competition_id')
+        ->where(['user_id' => Yii::$app->user->identity->id, 'competition_id'=>$ids])
+        //->indexBy('competition_id')
+        //->column();
+        ->asArray()->column();
     }
 }

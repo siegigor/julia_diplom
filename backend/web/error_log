@@ -3776,3 +3776,1864 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1505243714.234981060028076171875,
     'REQUEST_TIME' => 1505243714,
 ]
+[13-Sep-2017 13:55:34 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12042',
+    'REDIRECT_URL' => '/yii-admin',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300134.130175113677978515625,
+    'REQUEST_TIME' => 1505300134,
+]
+[13-Sep-2017 13:55:52 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=rrobr77s19bjcjaen771tllcu1; advanced-backend=nqrcbtr0vdjt3nqeqbd30ssca2; _identity-backend=b039e35fe7e9de1065325929eb171056359d4650f1f5b0093cd4c3089ae7c386a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22CqRtbb8oYDYAB0uOE_X-6VcIMWvnxvNU%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12047',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300152.7710020542144775390625,
+    'REQUEST_TIME' => 1505300152,
+]
+[13-Sep-2017 13:56:53 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12056',
+    'REDIRECT_URL' => '/yii-admin',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300212.9956080913543701171875,
+    'REQUEST_TIME' => 1505300212,
+]
+[13-Sep-2017 13:57:00 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12065',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300220.190146923065185546875,
+    'REQUEST_TIME' => 1505300220,
+]
+[13-Sep-2017 13:57:05 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12066',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300225.4048640727996826171875,
+    'REQUEST_TIME' => 1505300225,
+]
+[13-Sep-2017 13:57:20 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12073',
+    'REDIRECT_URL' => '/yii-admin',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300240.01949310302734375,
+    'REQUEST_TIME' => 1505300240,
+]
+[13-Sep-2017 13:57:27 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12074',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300247.6250679492950439453125,
+    'REQUEST_TIME' => 1505300247,
+]
+[13-Sep-2017 13:58:04 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12083',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300284.1653430461883544921875,
+    'REQUEST_TIME' => 1505300284,
+]
+[13-Sep-2017 13:58:07 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12084',
+    'REDIRECT_URL' => '/yii-admin/site/login',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/login',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300287.699799060821533203125,
+    'REQUEST_TIME' => 1505300287,
+]
+[13-Sep-2017 13:58:10 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12087',
+    'REDIRECT_URL' => '/yii-admin/site/login',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/login',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300290.57063198089599609375,
+    'REQUEST_TIME' => 1505300290,
+]
+[13-Sep-2017 13:58:12 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12088',
+    'REDIRECT_URL' => '/yii-admin/site/login',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/login',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300292.9077661037445068359375,
+    'REQUEST_TIME' => 1505300292,
+]
+[13-Sep-2017 13:58:15 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12089',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300295.980743885040283203125,
+    'REQUEST_TIME' => 1505300295,
+]
+[13-Sep-2017 13:58:19 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "dfgsdfg".' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dfgsdfg', Array)
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Страница не найдена.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=gd2t45qphiemkd6l9p3a2iam16; _identity-backend=7d2cd93eb552e2060ae6a36fa03bb44ade67ed20c6dd8a2526766a32c740b97ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12090',
+    'REDIRECT_URL' => '/yii-admin/dfgsdfg',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/dfgsdfg',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300299.1077899932861328125,
+    'REQUEST_TIME' => 1505300299,
+]
+[13-Sep-2017 14:01:35 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=rrobr77s19bjcjaen771tllcu1; advanced-backend=nqrcbtr0vdjt3nqeqbd30ssca2; _identity-backend=b039e35fe7e9de1065325929eb171056359d4650f1f5b0093cd4c3089ae7c386a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22CqRtbb8oYDYAB0uOE_X-6VcIMWvnxvNU%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12134',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300495.693296909332275390625,
+    'REQUEST_TIME' => 1505300495,
+]
+[13-Sep-2017 14:01:39 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_ORIGIN' => 'http://diplom.require-tests.s-host.net',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12135',
+    'REDIRECT_URL' => '/yii-admin/site/logout',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/logout',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300499.6723349094390869140625,
+    'REQUEST_TIME' => 1505300499,
+]
+[13-Sep-2017 14:02:08 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12153',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300528.5629069805145263671875,
+    'REQUEST_TIME' => 1505300528,
+]
+[13-Sep-2017 14:02:11 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12158',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300531.297171115875244140625,
+    'REQUEST_TIME' => 1505300531,
+]
+[13-Sep-2017 14:03:52 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/index', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_csrf-frontend=2c6a7f510ba9e33d3db23c52dad2160b5d94d87149e4c05f72b0e21954df73b4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Jqrj5Rroyr5fcl-HNMuTAKb50E7xzFej%22%3B%7D; googtrans=/ru/ru; advanced-frontend=rrobr77s19bjcjaen771tllcu1; advanced-backend=hvvh4lnfan707tedt74dvnfbg3; _identity-backend=b039e35fe7e9de1065325929eb171056359d4650f1f5b0093cd4c3089ae7c386a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22CqRtbb8oYDYAB0uOE_X-6VcIMWvnxvNU%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12197',
+    'REDIRECT_URL' => '/yii-admin/site/index',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/index',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505300632.3205420970916748046875,
+    'REQUEST_TIME' => 1505300632,
+]
+[13-Sep-2017 14:11:05 Europe/Moscow] PHP Fatal error:  Call to a member function getMessage() on null in /home/tptohwig/public_html/diplom/backend/controllers/SiteController.php on line 92
+[13-Sep-2017 14:13:37 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12313',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505301217.6933619976043701171875,
+    'REQUEST_TIME' => 1505301217,
+]
+[13-Sep-2017 14:15:57 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12361',
+    'REDIRECT_URL' => '/yii-admin/',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505301357.6108639240264892578125,
+    'REQUEST_TIME' => 1505301357,
+]
+[13-Sep-2017 14:16:06 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12365',
+    'REDIRECT_URL' => '/yii-admin/site/logout',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/logout',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505301366.2790720462799072265625,
+    'REQUEST_TIME' => 1505301366,
+]
+[13-Sep-2017 14:16:08 Europe/Moscow] An Error occurred while handling another error:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\web\ErrorAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\web\ErrorAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\web\ErrorAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\ForbiddenHttpException))
+#10 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\ForbiddenHttpException))
+#11 {main}
+Previous exception:
+exception 'yii\web\ForbiddenHttpException' with message 'Вам не разрешено производить данное действие.' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-frontend=drihmvn2of5reh0899b0k2k7n2; advanced-backend=3btuhdk7p7is9mq68nstrhiv00; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '12370',
+    'REDIRECT_URL' => '/yii-admin/site/logout',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/site/logout',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505301368.9838979244232177734375,
+    'REQUEST_TIME' => 1505301368,
+]
+[13-Sep-2017 17:03:03 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\base\View::{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 4)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\ErrorException))
+#8 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#9 {main}
+Previous exception:
+exception 'yii\base\ErrorException' with message 'date() expects parameter 2 to be long, string given' in /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/index.php:60
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', '/home/tptohwig/...', 60, Array)
+#1 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/index.php(60): date('', 'H:i (d.m.Y)')
+#2 [internal function]: yii\base\View->{closure}(Object(common\models\Competition), 21, 0, Object(yii\grid\DataColumn))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(213): call_user_func(Object(Closure), Object(common\models\Competition), 21, 0, Object(yii\grid\DataColumn))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Competition), 21, 0)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Competition), 21, 0)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Competition), 21, 0)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Competition), 21, 0)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/index.php(77): yii\base\Widget::widget(Array)
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\CompetitionController))
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\CompetitionController))
+#21 /home/tptohwig/public_html/diplom/backend/controllers/CompetitionController.php(35): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\CompetitionController->actionIndex()
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('competition', Array)
+#27 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-backend=n8ttati7pik8cqmi4hqadhcsm1; advanced-frontend=rh9549b84o2r48qhomtjq3tm62; _identity-frontend=aa3ac747e257b6c532732532a756ed4e80ebc7c2e0d1c58be27337575390738da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/competition/view?id=21',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '11358',
+    'REDIRECT_URL' => '/yii-admin/competition',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/yii-admin/competition',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505311383.166233062744140625,
+    'REQUEST_TIME' => 1505311383,
+]
+[13-Sep-2017 17:07:23 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\base\View::{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 6)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\ErrorException))
+#8 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#9 {main}
+Previous exception:
+exception 'yii\base\ErrorException' with message 'Missing argument 1 for common\models\Competition::getCompetition(), called in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php on line 132 and defined' in /home/tptohwig/public_html/diplom/common/models/Competition.php:83
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/common/models/Competition.php(83): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', '/home/tptohwig/...', 83, Array)
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(132): common\models\Competition::getCompetition()
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#3 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(49): yii\db\BaseActiveRecord->__get('competition')
+#4 [internal function]: yii\base\View->{closure}(Object(common\models\Competition), Object(yii\widgets\DetailView))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(243): call_user_func(Object(Closure), Object(common\models\Competition), Object(yii\widgets\DetailView))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(141): yii\widgets\DetailView->normalizeAttributes()
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Object.php(107): yii\widgets\DetailView->init()
+#8 [internal function]: yii\base\Object->__construct(Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(136): yii\BaseYii::createObject(Array)
+#13 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(56): yii\base\Widget::widget(Array)
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#16 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\CompetitionController))
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(backend\controllers\CompetitionController))
+#18 /home/tptohwig/public_html/diplom/backend/controllers/CompetitionController.php(42): yii\base\Controller->render('view', Array)
+#19 [internal function]: backend\controllers\CompetitionController->actionView('21')
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#22 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('competition/vie...', Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#26 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-backend=n8ttati7pik8cqmi4hqadhcsm1; advanced-frontend=rh9549b84o2r48qhomtjq3tm62; _identity-frontend=aa3ac747e257b6c532732532a756ed4e80ebc7c2e0d1c58be27337575390738da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/competition',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '11445',
+    'REDIRECT_URL' => '/yii-admin/competition/view',
+    'REDIRECT_QUERY_STRING' => 'id=21',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'id=21',
+    'REQUEST_URI' => '/yii-admin/competition/view?id=21',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505311643.0669460296630859375,
+    'REQUEST_TIME' => 1505311643,
+]
+[13-Sep-2017 17:08:15 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\base\View::{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 6)
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/home/tptohwig/...')
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\ErrorException))
+#8 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\ErrorException))
+#9 {main}
+Previous exception:
+exception 'yii\base\ErrorException' with message 'Missing argument 1 for common\models\Competition::getCompetition(), called in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php on line 132 and defined' in /home/tptohwig/public_html/diplom/common/models/Competition.php:83
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/common/models/Competition.php(83): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', '/home/tptohwig/...', 83, Array)
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php(132): common\models\Competition::getCompetition()
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('competition')
+#3 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(49): yii\db\BaseActiveRecord->__get('competition')
+#4 [internal function]: yii\base\View->{closure}(Object(common\models\Competition), Object(yii\widgets\DetailView))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(243): call_user_func(Object(Closure), Object(common\models\Competition), Object(yii\widgets\DetailView))
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(141): yii\widgets\DetailView->normalizeAttributes()
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Object.php(107): yii\widgets\DetailView->init()
+#8 [internal function]: yii\base\Object->__construct(Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(136): yii\BaseYii::createObject(Array)
+#13 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(56): yii\base\Widget::widget(Array)
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#16 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\CompetitionController))
+#17 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(backend\controllers\CompetitionController))
+#18 /home/tptohwig/public_html/diplom/backend/controllers/CompetitionController.php(42): yii\base\Controller->render('view', Array)
+#19 [internal function]: backend\controllers\CompetitionController->actionView('21')
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#22 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#23 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('competition/vie...', Array)
+#24 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#26 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-backend=n8ttati7pik8cqmi4hqadhcsm1; advanced-frontend=rh9549b84o2r48qhomtjq3tm62; _identity-frontend=aa3ac747e257b6c532732532a756ed4e80ebc7c2e0d1c58be27337575390738da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/competition',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '11458',
+    'REDIRECT_URL' => '/yii-admin/competition/view',
+    'REDIRECT_QUERY_STRING' => 'id=21',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'id=21',
+    'REQUEST_URI' => '/yii-admin/competition/view?id=21',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505311694.9794371128082275390625,
+    'REQUEST_TIME' => 1505311694,
+]
+[13-Sep-2017 17:09:09 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\base\View::{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 4)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Competition::checkedd' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('checkedd')
+#1 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(51): yii\db\BaseActiveRecord->__get('checkedd')
+#2 [internal function]: yii\base\View->{closure}(Object(common\models\Competition), Object(yii\widgets\DetailView))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(243): call_user_func(Object(Closure), Object(common\models\Competition), Object(yii\widgets\DetailView))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(141): yii\widgets\DetailView->normalizeAttributes()
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Object.php(107): yii\widgets\DetailView->init()
+#6 [internal function]: yii\base\Object->__construct(Array)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(136): yii\BaseYii::createObject(Array)
+#11 /home/tptohwig/public_html/diplom/backend/views/yii2-app/competition/view.php(56): yii\base\Widget::widget(Array)
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\CompetitionController))
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(backend\controllers\CompetitionController))
+#16 /home/tptohwig/public_html/diplom/backend/controllers/CompetitionController.php(42): yii\base\Controller->render('view', Array)
+#17 [internal function]: backend\controllers\CompetitionController->actionView('21')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#21 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('competition/vie...', Array)
+#22 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#24 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-backend=n8ttati7pik8cqmi4hqadhcsm1; advanced-frontend=rh9549b84o2r48qhomtjq3tm62; _identity-frontend=aa3ac747e257b6c532732532a756ed4e80ebc7c2e0d1c58be27337575390738da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/competition',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '11469',
+    'REDIRECT_URL' => '/yii-admin/competition/view',
+    'REDIRECT_QUERY_STRING' => 'id=21',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'id=21',
+    'REQUEST_URI' => '/yii-admin/competition/view?id=21',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505311749.316380023956298828125,
+    'REQUEST_TIME' => 1505311749,
+]
+[13-Sep-2017 17:14:19 Europe/Moscow] An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Method yii\base\View::{closure}() does not exist' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(308): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 4)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/ErrorHandler.php(114): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#11 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownPropertyException))
+#12 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#13 {main}
+Previous exception:
+exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\Solution::solution' in /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('solution')
+#1 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/view.php(37): yii\db\BaseActiveRecord->__get('solution')
+#2 [internal function]: yii\base\View->{closure}(Object(common\models\Solution), Object(yii\widgets\DetailView))
+#3 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(243): call_user_func(Object(Closure), Object(common\models\Solution), Object(yii\widgets\DetailView))
+#4 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/widgets/DetailView.php(141): yii\widgets\DetailView->normalizeAttributes()
+#5 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Object.php(107): yii\widgets\DetailView->init()
+#6 [internal function]: yii\base\Object->__construct(Array)
+#7 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#8 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#9 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#10 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Widget.php(136): yii\BaseYii::createObject(Array)
+#11 /home/tptohwig/public_html/diplom/backend/views/yii2-app/solution/view.php(48): yii\base\Widget::widget(Array)
+#12 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(328): require('/home/tptohwig/...')
+#13 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/tptohwig/...', Array)
+#14 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/home/tptohwig/...', Array, Object(backend\controllers\SolutionController))
+#15 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(backend\controllers\SolutionController))
+#16 /home/tptohwig/public_html/diplom/backend/controllers/SolutionController.php(42): yii\base\Controller->render('view', Array)
+#17 [internal function]: backend\controllers\SolutionController->actionView('133')
+#18 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#20 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#21 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('solution/view', Array)
+#22 /home/tptohwig/public_html/diplom/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/tptohwig/public_html/diplom/backend/web/index.php(17): yii\base\Application->run()
+#24 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,en-US;q=0.8,en;q=0.6,ru;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ym_uid=1484064123912977702; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; supportOnlineTalkID=3O1cTRB4PCeU2mQAvetfe6T1b8OZvbVL; _csrf-frontend=38d6bc194732316347cceb1e4a44159675c013050cff85055a10e4299d98496ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22kEYr6THgg_-XJMDs-e7aEu2m57nMgBHt%22%3B%7D; advanced-backend=n8ttati7pik8cqmi4hqadhcsm1; advanced-frontend=rh9549b84o2r48qhomtjq3tm62; _identity-frontend=aa3ac747e257b6c532732532a756ed4e80ebc7c2e0d1c58be27337575390738da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22rmX5Ww3_iSR_Xqdw9CpomBZ-nW_9JCWZ%22%2C2592000%5D%22%3B%7D; _identity-backend=afbb4743fbecb523b9cad75d1a7d68155e0165c0a30332fb4f29e5f66dc60999a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22XKFt4cOZZCYkmTA2wwGh8DX1bw_s55QG%22%2C2592000%5D%22%3B%7D',
+    'HTTP_HOST' => 'diplom.require-tests.s-host.net',
+    'HTTP_REFERER' => 'http://diplom.require-tests.s-host.net/yii-admin/solution',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'diplom.require-tests.s-host.net',
+    'SERVER_ADDR' => '5.196.212.17',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.154.201.156',
+    'DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home2/tptohwig/public_html/diplom',
+    'SERVER_ADMIN' => 'webmaster@diplom.require-tests.s-host.net',
+    'SCRIPT_FILENAME' => '/home2/tptohwig/public_html/diplom/backend/web/index.php',
+    'REMOTE_PORT' => '11584',
+    'REDIRECT_URL' => '/yii-admin/solution/view',
+    'REDIRECT_QUERY_STRING' => 'id=133',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'id=133',
+    'REQUEST_URI' => '/yii-admin/solution/view?id=133',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1505312059.56943798065185546875,
+    'REQUEST_TIME' => 1505312059,
+]

@@ -265,6 +265,14 @@ h1,h2, h3, h4
     background: linear-gradient(90deg, #fff, #f5b5cc, #f36a9b, #f5b5cc, #fff);
 }
 
+.test_res .task_solved,
+.test_res .task_not_solved,
+.task_not_solved_p
+
+{
+    text-align: center;
+}
+
 .test_res .task_solved, .send_solve .task_solved
 {
     color: #177138;

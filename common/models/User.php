@@ -236,6 +236,6 @@ class User extends ActiveRecord implements IdentityInterface
     
     public static function getShortRaiting()
     {
-        return self::find()->select(['username', 'raiting', 'tasks_solved', 'country'])->orderBy('raiting DESC')->limit(5)->all();
+        return self::find()->select(['username', 'raiting', 'tasks_solved', 'country', 'university', 'group', 'name'])->orderBy('raiting DESC')->limit(5)->all();
     }
 }

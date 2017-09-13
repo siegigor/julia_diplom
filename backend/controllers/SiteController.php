@@ -25,17 +25,18 @@ class SiteController extends Controller
                     [
                         'actions' => ['login'],
                         'allow' => true,
+                        'roles' => ['?'],
                     ],
                     [
                         'actions' => ['logout', 'index', 'error'],
                         'allow' => true,
                         'roles' => ['@'],
-                        'matchCallback' => function ($rule, $action) {
+                        /*'matchCallback' => function ($rule, $action) {
                             if(User::isUserAdmin(Yii::$app->user->identity->username))
                                 return true;
                             else
                                 return false;
-                       }
+                       }*/
                     ],
                 ],
             ],
@@ -77,26 +78,18 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
         $model = new LoginForm();
            
         if ($model->load(Yii::$app->request->post()) && $model->validate()) 
         {
-            try {
-                $model->login();
+            if($model->loginAdmin())
                 return $this->goBack();
-            } catch (\DomainException $e) {
-                Yii::$app->session->setFlash('error', $e->getMessage());
-            }
-        } else 
-        {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+             else 
+                Yii::$app->session->setFlash('error', 'Пользователь не найден');
         }
+        return $this->render('login', [
+            'model' => $model,
+        ]);
     }
 
     /**

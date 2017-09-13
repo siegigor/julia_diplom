@@ -69,15 +69,23 @@
                             <?php $i=1; foreach($competitions as $comp){?>
                             <tr>
                                 <th><?=$i;?></th>
-                                <td><a href="#"><?=$comp->name;?></a></td>
-                                <td><a href="<?=Url::toRoute(['main/competition', 'id'=>$id]);?>" class="btn btn-success">Принять участие</a></td>
+                                <td><a href="<?= Url::toRoute(['main/competition', 'id' => $comp->id]);?>"><?=$comp->name;?></a></td>
+                                
+                                <td>
+                                    <?php if(in_array($comp->id, $get_part)) {?>
+                                    <a href="<?= Url::toRoute(['main/competition', 'id' => $comp->id]);?>" class="btn btn-warning">Продолжить соревнование</a>
+                                    <?php } else { ?>
+                                    <a href="<?= Url::toRoute(['main/competition', 'id' => $comp->id]);?> " class="btn btn-success">Принять участие</a>
+                                    <?php } ?>
+                                </td>
+                                
                                 <td>
                                     <?=date('H:i d-m-Y', $comp->time_start);?>
                                 </td>
                                 <td><?=date('H:i d-m-Y', $comp->time_end);?></td>
                                 <td><?php if($comp->start){
-                                    echo 'Идет соревнование';
-                                }?></td>
+                                    echo '<span class="label label-primary">Идет соревнование</span>';
+                                } else echo '<span class="label label-warning">Еще не началось</span>';?></td>
                             </tr>
                             <?php $i++;}?>
                         </tbody>
@@ -101,9 +109,12 @@
                             <tr>
                                 <th>Место</th>
                                 <th>Пользователь</th>
-                                <th>Местонахождение</th>
+                                <th>ФИО</th>
                                 <th>Рейтинг</th>
                                 <th>Задачи</th>
+                                <th>Местонахождение</th>
+                                <th>Университет</th>
+                                <th>Группа</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -111,11 +122,12 @@
                             <tr>
                                 <th><?= $i ;?></th>
                                 <td><a href="#"><?= $user->username ;?></a></td>
-                                <td>
-                                    <?= $user->country;?>
-                                </td>
+                                <td><?=$user->name;?></td>
                                 <td><?= $user->raiting;?></td>
                                 <td><?= $user->tasks_solved ;?></td>
+                                <td><?= $user->country;?></td>
+                                <td><?= $user->university;?></td>
+                                <td><?= $user->group;?></td>
                             </tr>
                         <?php $i++; } ?>
                         </tbody>

@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use common\widgets\Alert;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -25,6 +26,7 @@ $fieldOptions2 = [
         <p class="login-box-msg">Авторизизуйтесь чтоб войти в админ-панель</p>
 
         <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
+        <?= Alert::widget() ?>
 
         <?= $form
             ->field($model, 'username', $fieldOptions1)

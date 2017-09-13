@@ -23,10 +23,10 @@ class MainController extends \yii\web\Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['task'],
+                'only' => ['task', 'competitions', 'competition', 'profile'],
                 'rules' => [
                     [
-                        'actions' => ['task'],
+                        'actions' => ['task', 'competitions', 'competition', 'profile'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -40,10 +40,12 @@ class MainController extends \yii\web\Controller
         $users = User::getShortRaiting();
         $tasks = Task::getNewTasks();
         $competitions = Competition::getNewCompetitions();
+        $get_part = Board::getUserCompetition($competitions);
         return $this->render('index', [
             'users' => $users,
             'tasks' => $tasks,
             'competitions' => $competitions,
+            'get_part' => $get_part,
         ]);
 
     }
@@ -58,6 +60,7 @@ class MainController extends \yii\web\Controller
         return $this->render('tasks', [
             'tasks' => $tasks,
             'solutions'=>Solution::getUserSolutions($tasks),
+            'error_solutions' => Solution::getUserErrorSolutions($tasks),
             'categories' => $categories,
             'category' => $category,
             'pagination' => $pagination,
@@ -110,9 +113,9 @@ class MainController extends \yii\web\Controller
         }
          else
          {
-            $user=User::findByUsername(Yii::$app->user->identity->username);
+            $user=Yii::$app->user->identity;
             $solutions = Solution::getUserSolution(Yii::$app->user->identity->id);
-            $competitions = Board::getUserCompetition();
+            $competitions = Competition::getCompetitionByUser(Yii::$app->user->identity->id);
             if ($user->load(Yii::$app->request->post()) && $user->validate()) 
             {
                 $user->save();   
@@ -139,7 +142,7 @@ class MainController extends \yii\web\Controller
     public function actionCompetitions()
     {
         $competitions = Competition::getCompetitions();
-        $get_part = Board::getUserCompetition();
+        $get_part = Board::getUserCompetition($competitions);
         
         return $this->render('competitions', [
                 'competitions' => $competitions,
@@ -150,6 +153,14 @@ class MainController extends \yii\web\Controller
     public function actionCompetition($id)
     {
         $competition = Competition::getCompetition($id);
+        if($competition->time_start > date('U'))
+            return $this->render('competitionfuture', [
+                'competition' => $competition,
+            ]);
+            
+        if($competition->time_end < date('U'))
+            throw new BadRequestHttpException('Соревнование уже закончилось.');
+            
         $comp_tasks = Competition::getCompTasks($id);
         Board::UserToCompetition($id);
         $solved_tasks = Solution::solvedFromCompetition($id);
@@ -158,7 +169,7 @@ class MainController extends \yii\web\Controller
                 'competition' => $competition,
                 'comp_tasks' => $comp_tasks,
                 'solved_tasks' => $solved_tasks,
-            ]);
+        ]);
     }
 
     

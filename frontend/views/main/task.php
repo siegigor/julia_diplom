@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
         <div class="col-md-12">
         <h1>Результаты проверки задачи "<?= $task->name ;?>"</h1>
         <?php if($error == "OK"){ ?>
-            <?php $i=0; foreach($task->test as $test){ ?>
+            <?php $suc=0; $i=0; foreach($task->test as $test){ ?>
                 <ul>
                     <li>
                         Тест №<?=$i+1;?>: 
@@ -25,6 +25,7 @@ use yii\widgets\Pjax;
                         }
                         else 
                         {
+                            $suc=1;
                             echo 
                             "
                             <div class='alert alert-danger' role='alert'>
@@ -36,15 +37,15 @@ use yii\widgets\Pjax;
                     </li>
                 </ul>
                 <?php $i++; } ?>
-                <?php if($isSolved!==false) { ?>
-                <h3 class="task_solved">Задача решена!</h3>   
+                <?php if($suc!=1) { ?>
+                <h3 class="task_solved"><span class="label label-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Задача решена!</span></h3>   
                 <?php } else {?>
-                <h3 class="task_not_solved">Задача не решена!</h3> 
+                <h3 class="task_not_solved"><span class="label label-danger"><i class="fa fa-ban" aria-hidden="true"></i> Задача не решена!</span></h3> 
                 <p class="task_not_solved_p">Вы можете отправить решение еще раз.</p>
                 <?php } ?>
                 
             <?php } else { ?>
-            <h3 class="task_not_solved">Ошибка!</h3> 
+            <h3 class="task_not_solved"><span class="label label-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Ошибка!</span> </h3> 
             <p class="task_not_solved_p"><?= $error ;?></p>
             <?php } ?>
         </div>

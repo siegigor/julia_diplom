@@ -69,7 +69,10 @@ class Solution extends \yii\db\ActiveRecord
     
     public static function getUserSolution($id)
     {
-        return self::find()->where(['user_id' => $id])->orderBy('id DESC')->all();
+        return self::find()
+        ->leftJoin('task', '`task`.`id` = `solution`.`task_id`')
+        ->with('task')
+        ->where(['user_id' => $id])->orderBy('id DESC')->all();
     }
     
     public function checkAndSave($task, $error, $success, $cid)
@@ -80,7 +83,7 @@ class Solution extends \yii\db\ActiveRecord
             if(!$cid)
                 User::resolveTask($task->num, $user_id, $task->id);
             else 
-                User::resolveTaskComp($task->num, $user_id, $task_id, $cid);
+                User::resolveTaskComp($task->num, $user_id, $task->id, $cid);
             
             $this->newSolution($user_id, $task->id, 1, $cid);
             $isSolved = 1;
@@ -116,6 +119,22 @@ class Solution extends \yii\db\ActiveRecord
         }
         $user_id=Yii::$app->user->identity->id;
         return self::find()->select(['task_id'])->where(['user_id'=>$user_id, 'task_id'=>$ids, 'solved'=>1])->indexBy('task_id')->column();
+     }
+     public static function getUserErrorSolutions($tasks)
+     {
+        $ids=[];
+        foreach($tasks as $task)
+        {
+            $ids[]=$task->id;
+        }
+        $user_id=Yii::$app->user->identity->id;
+        return self::find()
+        ->select(['task_id'])
+        ->where(['user_id'=>$user_id, 'task_id'=>$ids])
+        ->andWhere(['or',['error' => 'OK', 'solved'=>0],
+            ['and', ['!=', 'error', 'OK'],['solved'=>0]]])
+        ->indexBy('task_id')
+        ->column();
      }
 }
 

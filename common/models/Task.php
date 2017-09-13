@@ -32,7 +32,7 @@ class Task extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => 'Номер',
             'name' => 'Название',
             'text' => 'Текст',
             'num' => 'Количество баллов',
@@ -102,7 +102,10 @@ class Task extends \yii\db\ActiveRecord
     
     public static function getNewTasks()
     {
-        return self::find()->orderBy('id DESC')->limit(5)->all();
+        return self::find()
+        ->leftJoin('category', '`category`.`id` = `task`.`category_id`')
+        ->with('category')
+        ->orderBy('id DESC')->limit(5)->all();
     }
     public function findSolution()
     {

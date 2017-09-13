@@ -1,6 +1,5 @@
 <?php
-    use yii\helpers\Url;
-    
+    use yii\helpers\Url;   
 ?>
 <div class="container raiting_page">
     <div class="row">

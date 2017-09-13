@@ -32,11 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'solved',
                 'format' => 'html',
-                'value' => function()
+                'value' => function($model)
                 {
-                    if($model->solution->solved == 0)
+                    if($model->solved == 0)
                          return '<i class="fa fa-minus" aria-hidden="true"></i>';
-                    else if($model->solution->solved == 1)
+                    else if($model->solved == 1)
                         return '<i class="fa fa-check" aria-hidden="true"></i>';
                 }
             ],

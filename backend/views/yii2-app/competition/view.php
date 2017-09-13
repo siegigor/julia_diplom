@@ -31,11 +31,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'task_ids',
             [
                 'attribute' => 'time_start',
-                'format' =>  ['date', 'H:i (d.m.Y)'],
+                'value' =>  function($data){
+                    return date('H:i (d.m.Y)', $data->time_start);
+                }
             ],
             [
                 'attribute' => 'time_end',
-                'format' =>  ['date', 'H:i (d.m.Y)'],
+                'value' =>  function($data){
+                    return date('H:i (d.m.Y)', $data->time_start);
+                }
             ],
             [
                 'attribute' => 'user_id',
@@ -44,11 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'checked',
                 'format' => 'html',
-                'value' => function()
+                'value' => function($model)
                 {
-                    if($model->competition->checked == 0)
+                    if($model->checked == 0)
                          return '<i class="fa fa-minus" aria-hidden="true"></i>';
-                    else if($model->competition->checkedd == 1)
+                    else if($model->checked == 1)
                         return '<i class="fa fa-check" aria-hidden="true"></i>';
                 }
             ],

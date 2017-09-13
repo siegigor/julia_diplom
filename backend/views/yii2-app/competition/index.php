@@ -50,12 +50,17 @@ $this->params['breadcrumbs'][] = $this->title;
             //'time_start',
             [
                 'attribute' => 'time_start',
-                'format' =>  ['date', 'H:i (d.m.Y)'],
+                'value'=>function($data){
+                    return date('H:i (d.m.Y)', $data->time_start);
+                }
             ],
             //'time_end',
             [
                 'attribute' => 'time_end',
-                'format' =>  ['date', 'H:i (d.m.Y)'],
+                //'format' =>  ['date', 'H:i (d.m.Y)'],
+                'value'=>function($data){
+                    return date('H:i (d.m.Y)', $data->time_end);
+                }
             ],
             // 'user_id',
             //'checked',
