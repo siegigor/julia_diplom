@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\data\Pagination;
 use common\models\User;
 
 class Solution extends \yii\db\ActiveRecord
@@ -69,10 +70,19 @@ class Solution extends \yii\db\ActiveRecord
     
     public static function getUserSolution($id)
     {
-        return self::find()
+        $query = self::find()
         ->leftJoin('task', '`task`.`id` = `solution`.`task_id`')
         ->with('task')
-        ->where(['user_id' => $id])->orderBy('id DESC')->all();
+        ->where(['user_id' => $id]);
+        
+        $countQuery = clone $query;
+        $pagination = new Pagination([
+                'totalCount'=>$countQuery->count(),
+                'defaultPageSize'=>5
+        ]);
+        
+        $solutions=$query->offset($pagination->offset)->limit($pagination->limit)->orderBy('id DESC')->all();
+        return ['solutions'=>$solutions, 'pagination'=>$pagination ];
     }
     
     public function checkAndSave($task, $error, $success, $cid)

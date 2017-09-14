@@ -43,7 +43,8 @@ $url=Url::to('');
         <li <?php if (strpos($url, 'task')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/tasks']);?>"><i class="fa fa-code" aria-hidden="true"></i> Задачи <span class="sr-only">(current)</span></a></li>
         <li <?php if (strpos($url, 'competition')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/competitions']);?>"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Соревнования</a></li>
         <li <?php if (strpos($url, 'raiting')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['main/raiting']);?>"><i class="fa fa-star-o" aria-hidden="true"></i> Рейтинг</a></li>
-        <!--<li><a href="<?= Url::toRoute(['main/about']);?>">О нас</a></li>-->
+        <li <?php if (strpos($url, 'contact')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['site/contact']);?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> Обратная связь</a></li>
+        <li <?php if (strpos($url, 'about')) {?> class="active" <?php }?>><a href="<?= Url::toRoute(['site/about']);?>"><i class="fa fa-info" aria-hidden="true"></i> Информация</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">

@@ -104,7 +104,7 @@ class MainController extends \yii\web\Controller
     
 
     
-    public function actionProfile($edit = false)
+    public function actionProfile($edit = false, $page = false)
     {
         
         if (Yii::$app->user->isGuest) 
@@ -114,7 +114,9 @@ class MainController extends \yii\web\Controller
          else
          {
             $user=Yii::$app->user->identity;
-            $solutions = Solution::getUserSolution(Yii::$app->user->identity->id);
+            $solutions_pag = Solution::getUserSolution(Yii::$app->user->identity->id);
+            $solutions = $solutions_pag['solutions'];
+            $pagination = $solutions_pag['pagination'];
             $competitions = Competition::getCompetitionByUser(Yii::$app->user->identity->id);
             if ($user->load(Yii::$app->request->post()) && $user->validate()) 
             {
@@ -126,6 +128,8 @@ class MainController extends \yii\web\Controller
                 'edit' => $edit,
                 'solutions' => $solutions,
                 'competitions' => $competitions,
+                'pagination' => $pagination,
+                'page' => $page,
             ]);
         }
     }
@@ -139,14 +143,20 @@ class MainController extends \yii\web\Controller
             ]);
     }
     
-    public function actionCompetitions()
+    public function actionCompetitions($page = false)
     {
         $competitions = Competition::getCompetitions();
+        $old_competitions_pag = Competition::getOldCompetitions();
+        $old_competitions = $old_competitions_pag['competitions'];
+        $pagination = $old_competitions_pag['pagination'];
         $get_part = Board::getUserCompetition($competitions);
         
         return $this->render('competitions', [
                 'competitions' => $competitions,
+                'old_competitions' => $old_competitions,
                 'get_part' => $get_part,
+                'pagination' => $pagination,
+                'page' => $page,
             ]);
     }
     

@@ -27,11 +27,11 @@ use yii\widgets\Pjax;
                 <div class="col-md-4">
                     <a data-pjax="0" class="task_block_link" href="<?= Url::toRoute(['main/task', 'id' => $task->id]) ;?>">
                     <div class="task_block">
-                        <p data-toggle="tooltip" data-placement="right" title="<?=$task->name;?>" class="tb_title"><?= mb_substr($task->name, 0, 23);?></p>
+                        <p data-toggle="tooltip" data-placement="right" title="<?=$task->name;?>" class="tb_title"><?= mb_substr($task->name, 0, 25);?><?php if(mb_strlen($task->name) > 25){?>...<?php } ?></p>
                         <?php if(in_array($task->id, $solutions)){?>
-                        <p><span class="label label-success">Решена</span></p>
+                        <p class="tb_label"><span class="label label-success">Решена</span></p>
                         <?php } else if(in_array($task->id, $error_solutions)) {?>
-                        <p><span class="label label-danger">Ошибка</span></p>
+                        <p class="tb_label"><span class="label label-danger">Ошибка</span></p>
                         <?php } ?>
                         <p class="tb_dif">Сложность </p>
                         <p class="tb_stars">

@@ -6,6 +6,7 @@ use Yii;
 use common\models\Task;
 use common\models\User;
 use common\models\Board;
+use yii\data\Pagination;
 
 class Competition extends \yii\db\ActiveRecord
 {
@@ -68,6 +69,21 @@ class Competition extends \yii\db\ActiveRecord
     public static function getCompetitions()
     {
         return self::find()->where([">", 'time_end', date('U')])->andWhere(['checked' => 1])->all();
+    }
+    
+    public static function getOldCompetitions()
+    {
+        
+        $query = self::find()->where(["<", 'time_end', date('U')])->andWhere(['checked' => 1]);
+        
+        $countQuery = clone $query;
+        $pagination = new Pagination([
+                'totalCount'=>$countQuery->count(),
+                'defaultPageSize'=>5
+        ]);
+        
+        $competitions=$query->offset($pagination->offset)->limit($pagination->limit)->orderBy('id DESC')->all();
+        return ['competitions'=>$competitions, 'pagination'=>$pagination ];
     }
     
     public static function getNewCompetitions()

@@ -43,7 +43,7 @@
                         </tbody>
                     </table>
                 </div>
-                <a class="main_button" href="<?= Url::toRoute(['main/tasks']);?>"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> Все задачи</a>
+                <a class="main_button" href="<?= Url::toRoute(['main/tasks']);?>"><i class="fa fa-code" aria-hidden="true"></i> Все задачи</a>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
                         </tbody>
                     </table>
                 </div>
-                <a class="main_button" href="<?=Url::toRoute(['main/competitions']);?>"><i class="fa fa-tasks" aria-hidden="true"></i> Все соревнования</a>
+                <a class="main_button" href="<?=Url::toRoute(['main/competitions']);?>"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Все соревнования</a>
             <?php } else {?>
             <div class="alert alert-danger" role="alert">Предстоящих соревнований пока что нету</div>
             <?php }?>

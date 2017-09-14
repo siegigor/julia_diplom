@@ -81,15 +81,15 @@ class Task extends \yii\db\ActiveRecord
     {
         $query = self::find();
         
+        if($category)
+        {
+            $query->where(['category_id' => $category]);
+        }
         $countQuery = clone $query;
         $pagination = new Pagination([
             'totalCount' => $countQuery->count(),
             'defaultPageSize' => 9,
         ]);
-        if($category)
-        {
-            $query->where(['category_id' => $category]);
-        }
         $tasks = $query->offset($pagination->offset)->limit($pagination->limit)->all();
         
         return ['tasks' => $tasks, 'pagination' => $pagination];

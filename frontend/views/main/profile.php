@@ -3,6 +3,7 @@
     use yii\bootstrap\ActiveForm;
     use yii\helpers\Url;
     use yii\widgets\Pjax;
+    use yii\widgets\LinkPager;
     use frontend\models\Product;
     $this->title = "Личный кабинет";
 ?>
@@ -61,8 +62,10 @@
                     <?php }?>
                     <?php Pjax::end();?>
             </div>
+                       
             <div role="tabpanel" class="tab-pane" id="mysolutions">
                 <div class="row">
+                <?php Pjax::begin(['id'=>'competitions_pjax', 'timeout'=>5000]);?> 
                    <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
@@ -74,7 +77,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $i = 1; foreach($solutions as $sol){ ?>
+                            <?php $i = 1+ ($page ? 5*($page-1) : 0); foreach($solutions as $sol){ ?>
                                 <tr class="<?php if($sol->solved == 1) echo "success"; else echo "danger"; ?>">
                                     <th><?= $i ;?></th>
                                     <td><a href="<?= Url::toRoute(['main/task', 'id' => $sol->task->id]);?>"><?= $sol->task->name ;?></a></td>
@@ -96,8 +99,23 @@
                             </tbody>
                         </table>
                     </div>
+                 <div class="pags">
+                    <?php if($pagination) {?>
+                        <div id="" >
+                            <?=LinkPager::widget([
+                                'pagination'=>$pagination,
+                                'prevPageLabel'=>'<i class="fa fa-angle-double-left" aria-hidden="true"></i>',
+                                'nextPageLabel' => '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+                                'maxButtonCount'=>4
+                            ]);?>
+                        </div>
+                    <?php }?>
+                </div>
+                <?php Pjax::end();?> 
                  </div>
+                  
             </div>
+            
             <div role="tabpanel" class="tab-pane" id="mycompetitions">
                 <div class="row">
                     <div class="table-responsive">
